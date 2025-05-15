@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang Cá Nhân</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="card">
+    <img class="avatar" src="avatar.jpg" alt="Hiếu"/>
+    <h1>Hiếu</h1>
+  
+
+    <div class="social-links">
+        <a href="https://facebook.com/" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://instagram.com/" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.threads.net/" target="_blank">
+          <i class="fas fa-comment-dots"></i>
+          <span>Threads</span>
+        </a>
+      </div>
+      
+
+    <h2>📸</h2>
+    <div class="glider-contain">
+      <div class="glider">
+        <img src="anh1.jpg" alt="Ảnh cầu lông 1" />
+        <img src="anh2.jpg" alt="Ảnh cầu lông 2" />
+        <img src="anh3.jpg" alt="Ảnh cầu lông 3" />
+      </div>
+      <button class="glider-prev">«</button>
+      <button class="glider-next">»</button>
+      <div role="tablist" class="dots"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: '.dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        },
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</body>
+</html>
